@@ -1,4 +1,15 @@
-const tabela = document.querySelector("#taela")
-const aviso = document.querySelector("#aviso")
+const tabela = document.querySelector("#tabela")
 
-aviso.textContent = "Achei a Tabela! Ela tem " + tabela.children.length + " linhas."
+const linha = document.createElement("tr");
+
+const celulaNome = document.createElement("td");
+const celulaMedia = document.createElement("td");
+const celulaSituacao = document.createElement("td");
+
+celulaNome.textContent = "Daniel Dias";
+celulaMedia.textContent = 8.5;
+celulaSituacao.textContent = "aprovado";
+
+linha.append(celulaNome, celulaMedia, celulaSituacao)
+
+tabela.append(linha)
